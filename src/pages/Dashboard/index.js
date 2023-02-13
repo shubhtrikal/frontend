@@ -34,7 +34,7 @@ import axios from "axios";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
-import socket from "../../socket";
+// import socket from "../../socket";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Backdrop from "@mui/material/Backdrop";
@@ -130,14 +130,14 @@ const Dashboard = () => {
   const [isNot, setIsNot] = React.useState(false);
   const [note, setNote] = React.useState("");
 
-  socket.emit("join_room", "room1");
-  socket.on("requestAccepted", (data) => {
-    if(data.email === user.email){
-      console.log(data);
-      setIsNot(true);
-      setNote(data);
-    }
-  });
+  // socket.emit("join_room", "room1");
+  // socket.on("requestAccepted", (data) => {
+  //   if(data.email === user.email){
+  //     console.log(data);
+  //     setIsNot(true);
+  //     setNote(data);
+  //   }
+  // });
   const getRequests = async () => {
     await axios
       .get("http://localhost:8000/getRequests")

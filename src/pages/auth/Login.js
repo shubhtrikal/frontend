@@ -12,7 +12,7 @@ import "./vendor/login/select2/select2.min.css";
 import "./vendor/login/daterangepicker/daterangepicker.css";
 import "./css/login/util.css";
 import "./css/login/main.css";
-import  socket  from '../../socket';
+// import  socket  from '../../socket';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth } from '../../firebase';
 
@@ -42,7 +42,7 @@ export default function Login(props) {
         setUser(response.data)
         console.log(response.data);
         if(response.data.role === 'collector'){
-          socket.emit('join_room', 'room2')
+          // socket.emit('join_room', 'room2')
           if(response.data.status === 'unverified')
           {
             alert('Please wait for the admin to approve your request for signing in as a collector and login after sometime')
@@ -54,7 +54,7 @@ export default function Login(props) {
           }
         }
         else if(response.data.role === 'User') {
-          socket.emit('join_room', 'room1')
+          // socket.emit('join_room', 'room1')
           navigate('/dashboard')
         }
         else

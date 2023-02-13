@@ -11,7 +11,7 @@ import {
 } from "firebase/storage";
 import { useNavigate } from 'react-router-dom';
 import Modal_prop from '../../../Components/Modal_prop';
-import socket from '../../../socket';
+// import socket from '../../../socket';
 
 
 
@@ -144,7 +144,7 @@ export const DonorForm = (props) => {
         })
             .then((response) => {
                 console.log(response.data);
-                socket.emit('newRequest', 'room2')
+                // socket.emit('newRequest', 'room2')
                 props.getRequests()
             })
             .catch((err) => {

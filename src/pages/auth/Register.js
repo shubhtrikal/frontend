@@ -8,7 +8,7 @@ import "./css/register/main.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import {useNavigate} from 'react-router-dom'
-import socket from '../../socket'
+// import socket from '../../socket'
 export default function Register() {
   const navigate = useNavigate();
   const [state, setState] = useState({
@@ -48,12 +48,12 @@ export default function Register() {
         localStorage.setItem("user", JSON.stringify(response.data));
         setUser(response.data);
         if(response.data.role === 'collector'){
-          socket.emit('join_room', 'room2')
+          // socket.emit('join_room', 'room2')
           alert('Please wait for the admin to approve your request for signing in as a collector and login after sometime')
           navigate('/');
         }
         else{
-          socket.emit('join_room', 'room1')
+          // socket.emit('join_room', 'room1')
         }
         navigate('/dashboard')
       })

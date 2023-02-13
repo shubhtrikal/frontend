@@ -39,7 +39,7 @@ import { useState } from "react";
 import haversine from "haversine";
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import socket from '../../socket';
+// import socket from '../../socket';
 import HistoryIcon from '@mui/icons-material/History';
 // import axios from "axios";
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -137,11 +137,11 @@ const Dashboard_collector = () => {
   const [isNot, setIsNot] = React.useState(false);
   const [longitude, setlongitude] = useState(0);
   const [latitude, setlatitude] = useState(0);
-  socket.emit('join_room', 'room2')
-  socket.on('newRequest', () => {
-    console.log('frontend new request');
-    setIsNot(true);
-  })
+  // socket.emit('join_room', 'room2')
+  // socket.on('newRequest', () => {
+  //   console.log('frontend new request');
+  //   setIsNot(true);
+  // })
   const getRequests = async () => {
     await axios
       .get("http://localhost:8000/getRequests")
