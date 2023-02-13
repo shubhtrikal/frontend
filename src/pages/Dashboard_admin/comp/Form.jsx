@@ -98,7 +98,7 @@ export const DonorForm = () => {
 
         console.log(User)
 
-        await axios.post('http://localhost:8000/addcredit', {
+        await axios.post('https://red-gleaming-ray.cyclic.app/addcredit', {
             name: title,
             price: price,
             quantity: quantity,

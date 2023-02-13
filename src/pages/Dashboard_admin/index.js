@@ -106,7 +106,7 @@ const Dashboard_admin = () => {
   const [data, setData] = React.useState();
 
   const getData = async (email) => {
-    await axios.post('http://localhost:8000/getAllCollectors', {
+    await axios.post('https://red-gleaming-ray.cyclic.app/getAllCollectors', {
       email
     })
       .then(res => {
@@ -150,7 +150,7 @@ const Dashboard_admin = () => {
 
   const handleapi = async () => {
 
-    let info = await axios.get("http://localhost:8000/getRequests")
+    let info = await axios.get("https://red-gleaming-ray.cyclic.app/getRequests")
 
     try {
       console.log(info.data)

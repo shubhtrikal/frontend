@@ -34,7 +34,7 @@ export default function Login(props) {
   const [errorMessage, setErrorMessage] = useState("");
   const [user, setUser] = useState({});
   const SubmitMongo = async () => {
-    await axios.post('http://localhost:8000/login', {
+    await axios.post('https://red-gleaming-ray.cyclic.app/login', {
       email: state.email,
     })
       .then((response) => {

@@ -37,7 +37,7 @@ export default function Register() {
 
   const submitMongo = async () => {
     await axios
-      .post("http://localhost:8000/register", {
+      .post("https://red-gleaming-ray.cyclic.app/register", {
         name: state.name,
         email: state.email,
         number: state.phone,

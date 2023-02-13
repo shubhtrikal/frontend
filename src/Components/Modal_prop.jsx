@@ -51,8 +51,8 @@ const Modal_prop = (props) => {
         }
 
         try {
-            let info = await axios.put(`http://localhost:8000/donor/update`, long)
-            let info2 = await axios.post(`http://localhost:8000/users/whatapp`, { location: props.location })
+            let info = await axios.put(`https://red-gleaming-ray.cyclic.app/donor/update`, long)
+            let info2 = await axios.post(`https://red-gleaming-ray.cyclic.app/users/whatapp`, { location: props.location })
             alert("updated sucessfully")
             window.location.reload();
         }

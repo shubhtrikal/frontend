@@ -134,7 +134,7 @@ export const DonorForm = (props) => {
             navigate('/')
         }
 
-        await axios.post('http://localhost:8000/addrequest', {
+        await axios.post('https://red-gleaming-ray.cyclic.app/addrequest', {
             email: User.email,
             latitude,
             longitude,

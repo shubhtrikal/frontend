@@ -39,7 +39,7 @@ export default function CollectorResponse({data, email, getData}) {
                   style={{ marginRight: "20px" }}
                   onClick={async() => {
                     console.log("Collector approved successfully");
-                    await axios.post('http://localhost:8000/verifyCollector', {
+                    await axios.post('https://red-gleaming-ray.cyclic.app/verifyCollector', {
                       email : email,
                       collectorId : collector._id
                   })
@@ -57,7 +57,7 @@ export default function CollectorResponse({data, email, getData}) {
                 <button
                   onClick={async() => {
                     console.log("Collector approved successfully");
-                    await axios.post('http://localhost:8000/rejectCollector', {
+                    await axios.post('https://red-gleaming-ray.cyclic.app/rejectCollector', {
                       email : email,
                       collectorId : collector._id
                   })

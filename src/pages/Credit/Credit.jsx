@@ -107,7 +107,7 @@ const Credit = () => {
     const [proData, setProData] = useState([])
 
     const getProductData = async () => {
-        let info = await axios.get("http://localhost:8000/getAllProducts")
+        let info = await axios.get("https://red-gleaming-ray.cyclic.app/getAllProducts")
         try {
             setProData(info.data)
         } catch (error) {
@@ -118,7 +118,7 @@ const Credit = () => {
     const [user, setUser] = useState()
     const [score,setScore] = useState(5)
     const getCredit = async(email) => {
-        axios.post('http://localhost:8000/getCredit', {
+        axios.post('https://red-gleaming-ray.cyclic.app/getCredit', {
             email : email,
         })
         .then((response) => {

@@ -48,7 +48,7 @@ function Cal_comp_pick(props) {
     let requests = [];
     // console.log(props.user);
     await axios
-      .post("http://localhost:8000/getDetail", {
+      .post("https://red-gleaming-ray.cyclic.app/getDetail", {
         _id: props.user,
       })
       .then((res) => {
@@ -61,7 +61,7 @@ function Cal_comp_pick(props) {
     const updateArr = async (id, time) => {
       // console.log(id, time);
       await axios
-        .post("http://localhost:8000/getDetail", {
+        .post("https://red-gleaming-ray.cyclic.app/getDetail", {
           _id: id,
         })
         .then((res) => {
@@ -101,7 +101,7 @@ function Cal_comp_pick(props) {
     };
     const fetchRequestParams = async (_id) => {
       await axios
-        .post("http://localhost:8000/getRequest", {
+        .post("https://red-gleaming-ray.cyclic.app/getRequest", {
           _id: _id,
         })
         .then((res) => {

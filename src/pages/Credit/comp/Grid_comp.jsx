@@ -36,7 +36,7 @@ const Grid_comp = (props) => {
     }
 
     const changeScore = async(score) => {
-        await axios.post("http://localhost:8000/setScore", {
+        await axios.post("https://red-gleaming-ray.cyclic.app/setScore", {
             score: score,
             email : props.email
         })

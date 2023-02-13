@@ -140,7 +140,7 @@ const Dashboard = () => {
   // });
   const getRequests = async () => {
     await axios
-      .get("http://localhost:8000/getRequests")
+      .get("https://red-gleaming-ray.cyclic.app/getRequests")
       .then((res) => {
         // console.log(res.data);
         setRequests(res.data);

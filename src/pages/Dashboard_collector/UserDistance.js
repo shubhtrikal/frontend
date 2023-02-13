@@ -89,7 +89,7 @@ export default function CollectorResponse(props) {
                     // console.log(Datetime);
                     // requests.filter((item) => item.user != user.user);
                     await axios
-                      .post("http://localhost:8000/acceptRequest", {
+                      .post("https://red-gleaming-ray.cyclic.app/acceptRequest", {
                         email: props.email,
                         approveTime: Datetime,
                         requestId: user._id,
